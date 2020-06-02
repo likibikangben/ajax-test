@@ -35,12 +35,12 @@ function generatePaginationButtons(next, prev) {
 function writeToDocument(url) {
     var tableRows = [];
     var el = document.getElementById("data");
-    el.innerHTML = "";
 
     getData(url, function(data) {
         var paigination;
+
         if (data.next || data.previous) {
-            paigination = generatePaginationButtons(data.next. data.previous)
+            paigination = generatePaginationButtons(data.next, data.previous);
         }
 
         data = data.results;
